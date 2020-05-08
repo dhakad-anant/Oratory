@@ -1,0 +1,8 @@
+@media (max-width : 767px){
+    .home-content-inner h1{
+        font-size: 35px;
+    }
+    .blogs-singular p{
+        padding : 6px 0px
+    }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- required meta tags -->
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- bootstrap 4 css -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<title></title>
+</head>
+<body>
+
+
+	<header>
+		<!-- Navbar -->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark mb-5">
+  <!-- Brand -->
+  <a class="navbar-brand text-center text-capitalize text-white" >Vocabulary</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#home">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#aboutus">About us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#gallery">Gallery</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#news">News</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#whyus">Why Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+	</header>
+	<!-- Navebar ends -->
+
+
+	<!-- vocabulary heading -->
+<div class="container text-center text-dark">
+	<h1>Vocabulary</h1>
+	<hr class="w-25 mx-auto pt-5"> 
+</div>
+<!-- vocabulary heading ends -->
+
+<!-- navebar for word letters -->
+	<nav class="navbar navbar-expand-sm bg-light justify-content-center mb-5 navbar-light">
+  <!-- Links -->
+  <ul class="navbar-nav font-weight-bold">
+    {%for c in alphabets %}
+    <li class="nav-item">
+      <a class="nav-link" href="#{{c}}">{{c}}</a>
+    </li>
+    {% endfor %}
+     </ul>
+</nav>
+<!-- navebar for word letters ends -->
+
+
+
+<!-- word meaning table -->
+<div class="container">
+	<div class="table-responsive-sm">
+	<table class="table table-secondary table-hover table-striped">
+    <thead>
+      <tr>
+        <th>Word/Phrase</th>
+        <th>Meaning</th>
+        <th>Example</th>
+      </tr>
+    </thead>
+    <tbody>
+        <!--loop will start from here-->
+        {% for set in words %}
+          {% load file %}
+          {% for item in set|index:2 %}
+            {% if forloop.counter == 1 %}
+              <tr id="{{set|index:0}}">
+                <td>{{item|index:0}}</td>
+                <td>{{item|index:1}}</td>
+                <td>{{item|index:2}}</td>
+              </tr>
+            {% endif %}
+            {% if forloop.counter > 1 %}
+              <tr>
+                <td>{{item|index:0}}</td>
+                <td>{{item|index:1}}</td>
+                <td>{{item|index:2}}</td>
+              </tr>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+   
+      <!--loop ends here-->
+    </tbody>
+  </table>
+  </div>
+</div>
+<!-- table ends -->
+
+
+<!-- bootsrap4 scipts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <!-- bootstrap4 scripts ends -->
+</body>
+</html>
