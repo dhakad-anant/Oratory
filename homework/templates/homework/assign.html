@@ -11,7 +11,7 @@
         {% for k,v in dict.items %}
             <li>
                 {% load file %}
-                <a href="/homework/{{ k }}/{{ v }}/"> #  </a>  {{ newlist|index:k }} ---> {{ newlist|index:v }}
+                <a href="{% url 'sendhomework' k v %}"> #  </a>  {{ newlist|index:k }} ---> {{ newlist|index:v }}
                 <br><hr>
             </li>
         {% endfor %}    
@@ -20,3 +20,4 @@
 </html>
 
 
+ 
