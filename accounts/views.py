@@ -13,7 +13,7 @@ def signup_view(request):
             return redirect('articles:list')
         
     else:      
-        form=UserCreationForm
+        form=UserCreationForm()
     return  render(request,'accounts/signup.html',{'form':form})
 
 
