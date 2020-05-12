@@ -1,0 +1,65 @@
+
+{% load static %}
+{% load embed_video_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="content-script-type" content="text/javascript" />
+		<meta http-equiv="content-style-type" content="text/css" />
+		<meta http-equiv="content-language" content="nl" />
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Enarrators, IIT Ropar the official public speaking club" />	
+		<meta name="description" content="develope" />
+		<meta name="keywords" content="IIT Ropar, Public Speaking, Web development, Web developer, College clubs, have fun in college, leadership, team management, public speaking tutorials, IIT Ropar students's blogs" />
+		<meta name="revisit-after" content="7 days" />
+			
+		<title>Session Tutorials, Enarrators, IIT Ropar</title>
+		<link href="{% static 'video/css/bootstrap.min.css'%}" rel="stylesheet" />
+		<link href="{% static 'video/style.css' %}" rel="stylesheet" />
+</head>
+
+
+<body>
+	<div class="animator">
+		<div class="zoominheader">
+			<div class="zoomoutheader">	
+			</div>
+		</div>
+	<div id="toptext" class="container text-center">
+		<p class="bolder">Embarrasment </p>
+		
+		<p class="normal">is far better than </p>
+		<p class="bolder"> regret, </p>
+		
+		<p class="normal"> so don't wait and go for it.</p>
+
+	</div>
+		
+	</div>
+
+	<div id="videostuff">
+		<h1 style="margin-top: 100px; margin-bottom: 50px; font-weight: 600;" class="text-center">LESSON OF THE DAY</h1>
+		<hr />
+
+		<div style="margin-top: 100px" class= "container-fluid">
+			<div class="row ">
+				<div class="col-md-6"> 
+					{% video video.videolink 'medium' %}
+				</div>
+				<div id="authorviews" class="col-md-6">
+					<h1 class="text-center">Author's Views</h1>
+					<p> {{ video.text }}</p>
+						
+				</div>
+			</div>
+			
+		</div>
+
+		<div id="comments" class="container-fluid">
+			<h1 style="text-decoration:underline;margin-top: 80px; margin-left:50px"text-left">Comments</h1>
+		</div>
+	</div>
+
+</body>

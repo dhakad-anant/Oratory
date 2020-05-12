@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+</head>
+<body>
+    <h1>this page will map members of the group</h1>
+    <ul>
+        {% for k,v in dict.items %}
+            <li>
+                {% load file %}
+                <a href="{% url 'homework:sendhomework' k v %}"> #  </a>  {{ newlist|index:k }} ---> {{ newlist|index:v }}
+                <br><hr>
+            </li>
+        {% endfor %}    
+    </ul>
+</body>
+</html>
+
+
+ 
