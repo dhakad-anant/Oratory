@@ -15,9 +15,6 @@ $(function () {
         autoPlayTimeout: 5000,
         responsive: {
             // breakpoint from 0 up
-            0: {
-                items: 3
-            }
         }
     });
 })

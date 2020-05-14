@@ -1,21 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        body{
+            background-color: lightsteelblue;
+        }
+        .content{
+            background-color: lavender;
+            padding: 50px;
+            margin: 10px 70px;
+            border: 2px solid blue;
+        }
+        h1{
+            text-align: center;
+            
+        }
+        ul li{
+            background-color: white;
+            border: 0.3px solid grey;
+            padding: 7px;
+            margin: 7px;
+        }
+        
+        @media (max-width: 767px){
+            .content{
+                margin: 10px 20px;
+                padding: 20px;
+            }
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homework</title>
 </head>
 <body>
-    <h1>this page will map members of the group</h1>
+    <div class = "content">
+    <h1>This page will map members of the group</h1>
     <ul>
         {% for k,v in dict.items %}
             <li>
                 {% load file %}
                 <a href="{% url 'homework:sendhomework' k v %}"> #  </a>  {{ newlist|index:k }} ---> {{ newlist|index:v }}
-                <br><hr>
+                <br>
             </li>
         {% endfor %}    
     </ul>
+    </div>
 </body>
 </html>
 

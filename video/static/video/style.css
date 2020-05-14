@@ -146,3 +146,10 @@ hr {
 	margin-bottom: 0px;
 	overflow: hidden;
 }
+
+.videowrapper{
+  display: flex;
+}
+header{
+  font-size: 15px;
+}

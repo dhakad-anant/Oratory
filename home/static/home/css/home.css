@@ -163,6 +163,19 @@ body {
     font-size: 27px;
 }
 
+/* ########## WORD ########## */
+#word{
+    background-color: lightgray;
+}
+#word h4{
+    padding: 10px 20px;
+    text-decoration: underline;
+    font-weight: 700;
+}
+#word span{
+    padding-left: 40px;
+}
+
 /* ########## ABOUT ########## */
 #about .heading-line{
     margin-left: 10px;
