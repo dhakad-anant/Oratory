@@ -6,7 +6,8 @@
     <title>Homework</title>
 </head>
 <body>
-    <h1>this page will map members of the group</h1>
+    <h1>Do your work before deadline and live well</h1>
+    <a href="{% url 'homework:shuffle' %}">Update home work list</a>
     <ul>
         {% for k,v in dict.items %}
             <li>

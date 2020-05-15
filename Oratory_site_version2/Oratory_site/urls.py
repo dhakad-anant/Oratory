@@ -28,6 +28,7 @@ urlpatterns = [
     path('aboutus/',include('aboutus.urls')),
     path('homework/',include('homework.urls')),
     path('vocab/',include('vocab.urls')),
+   
 ]
 
 
