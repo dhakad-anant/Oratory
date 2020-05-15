@@ -4,5 +4,5 @@ from . import views
 app_name = 'vocab'
 
 urlpatterns = [
-    path('',views.storewords,name='storewords'),
+    path('allwords/',views.storewords,name='storewords'),
 ]
