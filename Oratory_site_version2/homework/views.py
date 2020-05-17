@@ -79,15 +79,3 @@ def sendhomework(request,sender_id,reciever_id):
 
     return render(request , 'homework/message.html', {'sender':sender,'reciever':reciever,'form':form})
 
-'''
-send_mail(subject,= 
-        message,=
-        from_email,= 
-        recipient_list,=
-        fail_silently=False,
-        auth_user=None, 
-        auth_password=None, 
-        connection=None, 
-        html_message=None
-        )
-'''
