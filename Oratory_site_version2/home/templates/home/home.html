@@ -136,7 +136,20 @@
             </div>
         </div>
     </section>
-
+    <section id="word">
+        <div class="word-title wow animated fadeIndown" data-wow-duration="1s" data-wow-delay=".5s">
+            <h4 class="word-heading">Today's word:<a href="{% url 'vocab:storewords'%}">(all words)</a></h4>
+            <ul>
+                <li>
+                    {{ word.new_word }} :- {{ word.meaning }}
+                </li>
+                <li>
+                    Example :- {{ word.example }}
+                </li>
+            </ul>
+        </div>
+    </section>
+    
     <section id="events">
         <div class="events-title wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
             <h1 class="events-heading heading-gn text-center">Events</h1>
