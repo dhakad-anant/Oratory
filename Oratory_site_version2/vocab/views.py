@@ -15,7 +15,7 @@ def storewords(request):
         alphabets.append(chr(i+65))
         select = Word.objects.all().filter(new_word__startswith=chr(i+65))
         length1 = len(select)
-        #print(chr(i+65),select,length1)
+    
         if(length1!=0):
             for j in range(length1):
                 tmp.append(select[j].new_word)
@@ -24,11 +24,11 @@ def storewords(request):
                 #print(tmp)
                 l.append(tmp)
                 tmp = []
-            print(chr(i+65))
+            
             wrds.append([chr(i+65),len(l),l])
-            print([chr(i+65),len(l),l])
+           
         l = []
-    print(alphabets)
+    
     return render(request,'vocab/vocabulary.html',{'words':wrds,'alphabets':alphabets,'range':range(26)})
 '''
 class Word(models.Model):
@@ -59,9 +59,8 @@ def newword(request):
             example = form.cleaned_data['example']
             newword = Word(new_word=word,meaning=meaning,example=example)
             newword.save()
-            print("-----------word add successfully-------------------------\n")
             return redirect('vocab:storewords')
-    print("-----------if this prints after addition-------------------------\n")
+    
     return render(request,'vocab/addword.html',{'form':form})
 
 '''
@@ -70,3 +69,9 @@ class Addwordform(forms.Form):
     meaning = forms.TextField(widget=forms.Textarea)
     example = forms.TextField(widget=forms.Textarea)
 '''
+
+
+def wordslist(request):
+    words= Word.objects.order_by('-id')
+    return render(request, 'vocab/vocablist.html',{'words':words})
+
