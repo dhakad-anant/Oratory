@@ -30,6 +30,8 @@ urlpatterns = [
     path('vocab/',include('vocab.urls')),
     path('tinymce/', include('tinymce.urls')),
     path('djrichtextfield/', include('djrichtextfield.urls')),
+    path('gallery/',include('gallery.urls')),
+    path('summernote/',include('django_summernote.urls')),
 ]
 
 
