@@ -28,7 +28,8 @@ urlpatterns = [
     path('aboutus/',include('aboutus.urls')),
     path('homework/',include('homework.urls')),
     path('vocab/',include('vocab.urls')),
-   
+    path('tinymce/', include('tinymce.urls')),
+    path('djrichtextfield/', include('djrichtextfield.urls')),
 ]
 
 
