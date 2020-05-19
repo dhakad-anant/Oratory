@@ -1,12 +1,22 @@
 body{
     background-color: #0f121f;
-    background-image: url(/static/stars.png);
+    background-image: url(/static/background3.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
     color: #fff;
+    padding: 0;
+    margin: 0;
+    height: 100%;
 }
 
 body *{
     font-family: Ubuntu;
+}
+
+.allcontent{
+    background-color: rgba(0,0,0,0.7);
+    padding: 0;
+    margin: 0;
 }
 
 h1, h2, h3, h4, h5{
@@ -15,8 +25,9 @@ h1, h2, h3, h4, h5{
 }
 
 a, a:hover, a:visited{
-    color: #fff;
+    color: white;
     text-decoration: none;
+    font-family: 'Roboto', sans-serif;
 }
 
 .wrapper{
@@ -26,27 +37,28 @@ a, a:hover, a:visited{
 
 div.wrapper > h1{
     text-align: center;
-    margin: 100px auto;
-    font-size: 2.4em
+    margin: 30px auto;
+    font-size: 2.4em;
+
 }
 
 header{
     display: grid;
-    grid-template-columns: 1fr 1fr;
     padding: 20px 0;
 }
 
-nav{
+.wrapper nav{
     justify-self: end;
 }
 
-nav li{
+.wrapper nav li{
     display: inline-block;
     list-style-type: none;
     margin-left: 20px;
+    font-size: 18px;
 }
 
-nav button{
+.wrapper nav button{
     background: none;
     color: #fff;
     cursor: pointer;
@@ -55,6 +67,7 @@ nav button{
 }
 
 .articles{
+    padding-top: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 30px;
@@ -62,9 +75,11 @@ nav button{
 
 .article{
     padding: 10px;
-    border: 1px solid #00dba0;
+    border: 2px solid cadetblue;
     position: relative;
     padding-bottom: 40px;
+    background-color: azure;
+    color: black;
 }
 
 .article h2{
@@ -73,7 +88,7 @@ nav button{
 
 .article .author{
     padding: 10px;
-    background: #00dba0;
+    background: cadetblue;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -82,7 +97,7 @@ nav button{
 }
 
 .article-detail .article{
-    padding: 0;
+    padding: 30px;
 }
 
 .article-detail  .article img{
@@ -105,7 +120,7 @@ nav button{
 
 .site-form {
     margin-top: 60px;
-    border: 1px solid #00dba0;
+    border: 1px solid cadetblue;
     padding: 20px;
 }
 
@@ -116,10 +131,10 @@ nav button{
 }
 
 a.highlight{
-    border: 1px solid #00dba0;
+    border: 1px solid cadetblue;
     padding: 10px;
     border-radius: 4px;
-    color: #00dba0;
+    color: cadetblue;
 }
 
 .helptext, .helptext ul{
@@ -141,10 +156,9 @@ a.highlight{
     padding: 0;
 }
 
-
 .site-form input[type="submit"]
 {
-    background: #00dba0;
+    background: cadetblue;
     border: 0;
     color: #fff;
     font-size: 20px;
