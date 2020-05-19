@@ -2,7 +2,7 @@
 
 {% block content %}
     <div class="create-article">
-        <h2>Create an Awesome New Article</h2>
+        <h2 style="font-family: Roboto, sans-serif; text-align: center; font-size: 30px;">Create an Awesome New Article</h2>
         <form class="site-form" action="{% url 'articles:create' %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form }}
